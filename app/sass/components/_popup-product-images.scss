@@ -1,0 +1,85 @@
+@use "../util/" as *;
+
+.popup-product-images {
+    display: none;
+
+    &.active {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &__container {
+        min-width: 500px;
+
+        div.x-ic {
+            width: 100%;
+            display: flex;
+            justify-content: end;
+
+            button {
+                background-color: transparent;
+                color: $white;
+                cursor: pointer;
+                font-size: 2.5rem;
+                @include transition(color, 200ms, linear);
+
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+
+        img.product_img {
+            width: 500px;
+            border-radius: 10px;
+        }
+
+        .next-btn,
+        .previous-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $white;
+            text-align: center;
+            border-radius: 50%;
+            padding: 15px 20px;
+            cursor: pointer;
+
+            img {
+                padding-top: 1.5px;
+                width: 13px;
+            }
+        }
+
+        .previous-btn {
+            left: 31.5%;
+        }
+
+        .next-btn {
+            right: 31.6%;
+        }
+
+        &__images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            margin-top: 10px;
+            padding: 0 30px;
+
+            > div {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}

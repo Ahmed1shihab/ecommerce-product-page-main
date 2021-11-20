@@ -1,0 +1,53 @@
+@use "../util" as *;
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Kumbh Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: $pale-orange;
+    color: $black;
+}
+
+.thumbnail {
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover::before,
+    &.active::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $light-grayish-blue;
+        opacity: 0.7;
+    }
+
+    &.active {
+        border: 3px solid $orange;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}

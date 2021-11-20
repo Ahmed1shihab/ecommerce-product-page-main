@@ -1,0 +1,3 @@
+@mixin transition($for: all, $time: 200ms, $type: ease-in-out) {
+    transition: $for $time $type;
+}

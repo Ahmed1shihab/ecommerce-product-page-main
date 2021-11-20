@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | E-commerce product page</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Styles -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+                margin: 25px 0 10px;
+            }
+            .attribution a {
+                color: #3e52a3;
+            }
+        </style>
+
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <div class="nav">
+                <div class="humburger_menu">
+                    <span></span><span></span><span></span>
+                </div>
+                <img src="images/logo.svg" alt="logo" />
+                <nav>
+                    <ul>
+                        <li><a href="#">Collections</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="overlay"></div>
+            </div>
+            <div class="profile_cart">
+                <div class="profile_cart__cart_container">
+                    <img
+                        src="images/icon-cart.svg"
+                        alt="cart"
+                        class="profile_cart__cart"
+                    />
+                    <span>3</span>
+                </div>
+
+                <div class="profile_cart__cart_content">
+                    <div class="profile_cart__cart_content__container">
+                        <h3>Cart</h3>
+                    </div>
+                </div>
+
+                <img
+                    src="images/image-avatar.png"
+                    alt="avatar"
+                    class="profile_cart__profile"
+                />
+            </div>
+        </header>
+
+        <!-- Main Section -->
+        <section class="main_section">
+            <div class="main_section__images">
+                <img
+                    src="images/image-product-1.jpg"
+                    alt="Product Image"
+                    class="product_img"
+                />
+
+                <button class="next-btn">
+                    <img src="images/icon-next.svg" alt="next" />
+                </button>
+                <button class="previous-btn">
+                    <img src="images/icon-previous.svg" alt="previous" />
+                </button>
+
+                <div class="main_section__images__thumbnails thumbnails">
+                    <div
+                        class="
+                            main_section__images__thumbnails__thumbnail
+                            thumbnail
+                            active
+                        "
+                        data-index="1"
+                    >
+                        <img
+                            src="images/image-product-1-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div
+                        class="
+                            main_section__images__thumbnails__thumbnail
+                            thumbnail
+                        "
+                        data-index="2"
+                    >
+                        <img
+                            src="images/image-product-2-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div
+                        class="
+                            main_section__images__thumbnails__thumbnail
+                            thumbnail
+                        "
+                        data-index="3"
+                    >
+                        <img
+                            src="images/image-product-3-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div
+                        class="
+                            main_section__images__thumbnails__thumbnail
+                            thumbnail
+                        "
+                        data-index="4"
+                    >
+                        <img
+                            src="images/image-product-4-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="main_section__details">
+                <span>Sneaker Company</span>
+
+                <h1>Fall Limited Edition Sneakers</h1>
+
+                <p class="description">
+                    These low-profile sneakers are your perfect casual wear
+                    companion. Featuring a durable rubber outer sole, they’ll
+                    withstand everything the weather can offer.
+                </p>
+
+                <div class="main_section__details__price">
+                    <div>
+                        <h2>$125.00</h2>
+                        <span>50%</span>
+                    </div>
+                    <p>$250.00</p>
+                </div>
+
+                <div class="main_section__details__add_to_cart_container">
+                    <div>
+                        <button id="decrease">-</button>
+                        <span class="items-counter">0</span>
+                        <button id="increase">+</button>
+                    </div>
+                    <button class="add-to-cart">
+                        <svg
+                            width="22"
+                            height="20"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z"
+                                fill="#fff"
+                                fill-rule="nonzero"
+                            />
+                        </svg>
+                        Add To Cart
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="popup-product-images">
+            <div class="popup-product-images__container">
+                <div class="x-ic"><button>&times;</button></div>
+                <img
+                    src="images/image-product-1.jpg"
+                    alt="Product Image"
+                    class="product_img"
+                />
+
+                <button class="next-btn">
+                    <img src="images/icon-next.svg" alt="next" />
+                </button>
+                <button class="previous-btn">
+                    <img src="images/icon-previous.svg" alt="previous" />
+                </button>
+
+                <div class="popup-product-images__container__images thumbnails">
+                    <div class="active thumbnail" data-index="1">
+                        <img
+                            src="images/image-product-1-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div class="thumbnail" data-index="2">
+                        <img
+                            src="images/image-product-2-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div class="thumbnail" data-index="3">
+                        <img
+                            src="images/image-product-3-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                    <div class="thumbnail" data-index="4">
+                        <img
+                            src="images/image-product-4-thumbnail.jpg"
+                            alt="Product Thumbnail"
+                            class="product_thumbnail"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="attribution">
+            Challenge by
+            <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                >Frontend Mentor</a
+            >. Coded by <a href="https://www.github.com/Ahmed1shihab">Ahmed</a>.
+        </div>
+        <script src="app/js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,260 @@
+@use "../util" as *;
+
+.main_section {
+    display: flex;
+    gap: 150px;
+    margin-top: 70px;
+    padding: 0px 180px;
+
+    @include breakpoint-down(large) {
+        gap: 90px;
+        padding: 0px 70px;
+    }
+
+    @include breakpoint-down(small) {
+        gap: 50px;
+        padding: 0px 30px;
+    }
+
+    @include breakpoint-down(xsmall) {
+        flex-direction: column;
+        gap: 0px;
+        margin-top: 0px;
+        padding: 0px 0px;
+    }
+
+    &__images {
+        @include breakpoint-down(xsmall) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .next-btn,
+        .previous-btn {
+            display: none;
+
+            @include breakpoint-down(xsmall) {
+                display: block;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: white;
+                text-align: center;
+                border-radius: 50%;
+                padding: 10px 15px;
+                cursor: pointer;
+            }
+        }
+
+        .next-btn {
+            @include breakpoint-down(xsmall) {
+                right: 10px;
+            }
+        }
+
+        .previous-btn {
+            @include breakpoint-down(xsmall) {
+                left: 10px;
+            }
+        }
+
+        img.product_img {
+            width: 400px;
+            border-radius: 10px;
+            cursor: pointer;
+
+            @include breakpoint-down(large) {
+                width: 360px;
+            }
+
+            @include breakpoint-down(small) {
+                width: 290px;
+            }
+
+            @include breakpoint-down(xsmall) {
+                width: 100%;
+                height: 500px;
+                object-fit: cover;
+                border-radius: 0;
+                pointer-events: none;
+            }
+        }
+
+        &__thumbnails {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+            @include breakpoint-down(xsmall) {
+                display: none;
+            }
+
+            &__thumbnail {
+                width: 80px;
+                height: 80px;
+
+                @include breakpoint-down(small) {
+                    width: 65px;
+                    height: 65px;
+                }
+            }
+        }
+    }
+
+    &__details {
+        margin-top: 50px;
+        width: 50%;
+
+        @include breakpoint-down(small) {
+            margin-top: 20px;
+        }
+
+        @include breakpoint-down(xsmall) {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        > span {
+            color: $orange;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            margin: 7px 0 25px;
+            font-size: 40px;
+            color: $vvark-blue;
+
+            @include breakpoint-down(large) {
+                font-size: 35px;
+            }
+
+            @include breakpoint-down(small) {
+                font-size: 30px;
+                margin: 7px 0 20px;
+            }
+        }
+
+        p.description {
+            color: $dark-grayish-blue;
+        }
+
+        &__price {
+            width: 135px;
+
+            @include breakpoint-down(xsmall) {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                justify-content: space-between;
+                margin-top: 20px;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 20px 0 10px;
+
+                @include breakpoint-down(xsmall) {
+                    margin: 0;
+                    width: 135px;
+                }
+
+                // Price
+                h2 {
+                    font-weight: 700;
+
+                    @include breakpoint-down(large) {
+                        font-size: 21px;
+                    }
+                }
+
+                // Discount Amount
+                span {
+                    background-color: $pale-orange;
+                    color: $orange;
+                    font-size: 14px;
+                    font-weight: 700;
+                    padding: 3px 7px;
+                    border-radius: 3px;
+                }
+            }
+
+            // Old Prcie
+            p {
+                color: $grayish-blue;
+                text-decoration: line-through;
+            }
+        }
+
+        &__add_to_cart_container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+
+            @include breakpoint-down(xsmall) {
+                flex-direction: column;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+            > div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 150px;
+                background-color: $light-grayish-blue;
+                padding: 15px;
+                font-size: 17px;
+                border-radius: 10px;
+                box-shadow: 3px 1px 10px rgba(0, 0, 0, 0.2);
+
+                @include breakpoint-down(xsmall) {
+                    width: 100%;
+                }
+
+                button {
+                    background-color: transparent;
+                    color: $orange;
+                    transform: scale(2);
+                    font-weight: 700;
+                    margin-bottom: 2px;
+                    @include transition(all, 400ms, ease-out);
+
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+
+            > button.add-to-cart {
+                flex-grow: 1;
+                background-color: $orange;
+                border-radius: 10px;
+                padding: 15px;
+                color: white;
+                font-weight: 700;
+                font-size: 17px;
+                box-shadow: 0px 3px 20px rgba(255, 125, 26, 0.5);
+                @include transition(all, 400ms, ease-out);
+
+                @include breakpoint-down(xsmall) {
+                    flex-grow: 0;
+                    width: 100%;
+                }
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}
