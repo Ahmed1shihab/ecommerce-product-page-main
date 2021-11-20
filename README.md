@@ -4,8 +4,8 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ### Links
 
--   Solution URL: [Add solution URL here](https://your-solution-url.com)
--   Live Site URL: [Add live site URL here](https://ahmed1shihab.github.io/ecommerce-product-page-main/m)
+-   Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/ecommerce-product-page-B_UJL9aH1)
+-   Live Site URL: [live site URL](https://ahmed1shihab.github.io/ecommerce-product-page-main/m)
 
 ## Author
 
