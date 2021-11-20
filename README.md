@@ -9,6 +9,6 @@ This is a solution to the [E-commerce product page challenge on Frontend Mentor]
 
 ## Author
 
--   Website - [Add your name here](https://www.your-site.com)
--   Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
--   Twitter - [@yourusername](https://www.twitter.com/yourusername)
+-   Frontend Mentor - [@Ahmed1shihab](https://www.frontendmentor.io/profile/Ahmed1shihab)
+-   Github - [@Ahmed1shihab](https://www.github.com/Ahmed1shihab)
+-   Twitter - [@7nv\_\_a](https://www.twitter.com/7nv__a)
